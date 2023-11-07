@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <h2>Sign Up</h2>
+      <span class="text-danger">{{ apiMessage }}</span>
+      <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+        <div class="mb-4">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username" [(ngModel)]="userData.username" required>
+          <span class="text-danger">{{ usernameError }}</span>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userData.email" required>
+          <span class="text-danger">{{ emailError }}</span>
+        </div>
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userData.password" required>
+          <span class="text-danger">{{ passwordError }}</span>
+        </div>
+        <div class="mb-4">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+          <span class="text-danger">{{ confirmPasswordError }}</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <p class="text mt-3">Already have an account? <a routerLink="/login">Sign In</a></p>
+    </div>
+    <div class="col-md-7 img-container">
+      <img class="rounded" src="https://images.unsplash.com/photo-1543599538-a6c4f6cc5c05?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image">
+    </div>
+  </div>
+</div>

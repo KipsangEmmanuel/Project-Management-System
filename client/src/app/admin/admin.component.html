@@ -1,0 +1,54 @@
+<!-- admin.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Admin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" style="margin-left: auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="logoutUser()">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="mb-3 d-flex justify-content-between">
+            <h1 class="text-center">My Projects</h1>
+            <div>
+              <button class="btn btn-success" id="createProject" style="flex-grow: 1" (click)="createNewProject()">Create a Project</button>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="">
+              <div class="row gy-4 product-content">
+                <!-- Populate project cards here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">List of Users</h5>
+          <div class="userlist-content">
+            <!-- Populate user list here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
