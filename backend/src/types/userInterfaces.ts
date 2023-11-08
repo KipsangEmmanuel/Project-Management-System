@@ -5,7 +5,7 @@ export interface updatUser {
 }
 export interface user extends updatUser {
   password: string;
-  isdeleted: boolean;
+  // isdeleted: boolean;
   isAdmin: boolean;
 }
 

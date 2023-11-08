@@ -10,7 +10,7 @@ begin
 			u.username,
 			u.isAdmin,
 			u.password
-	from	[users] u where email = @email and isDeleted = 0;
+	from	[users] u where email = @email ;
 end;
 
 exec getUserByEmail

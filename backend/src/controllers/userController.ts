@@ -74,7 +74,7 @@ export const registerUser = async (req: Request, res: Response) => {
       username,
       email,
       password: newPassword,
-      isdeleted: false,
+      // isdeleted: false,
       isAdmin: false,
     };
 
@@ -96,6 +96,9 @@ export const loginUser = async (req: Request, res: Response) => {
     const { email, password } = req.body;
     const procedureName = "getUserByEmail";
 
+    // console.log(email);
+    
+
     const { error } = validateLoginUser.validate(req.body);
 
     if (error)
@@ -104,7 +107,6 @@ export const loginUser = async (req: Request, res: Response) => {
         error:
           "password should be atleast 8 characters long <br> with letters symbols and uppercase",
       });
-
     const result = await execute(procedureName, { email });
     if (result) {
       const recordset = result.recordset;
