@@ -9,11 +9,13 @@ CREATE  TABLE users (
 	password varchar(250) NOT NULL,
 )
 
+SELECT * FROM users;
+
 DROP TABLE users
 
 
-select * from users where isAdmin = 1
+-- select * from users where isAdmin = 1
 
-update users set isAdmin = 1 where email = 'caleb.kellah@thejitu.com'
+-- update users set isAdmin = 1 where email = ''
 
-create database PMS
+-- create database PMS

@@ -35,7 +35,7 @@ app.get("*", (req, res) => {
   res.status(404).send({ message: "Page not found" });
 });
 
-const PORT = process.env.SERVER_PORT || 5020;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
