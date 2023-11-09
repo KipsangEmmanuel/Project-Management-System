@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-
   constructor() { }
   
   async checkDetails(){
@@ -17,11 +16,13 @@ export class UserService {
     })
 
     let data = await res.json()
-
-    let role = data.info.role
-    console.log(role);
+    console.log(data);
     
-
+    console.log(data.info);
+    
+    let role = data.info.isAdmin
+    // console.log(role);
     return role
   }
 }
+

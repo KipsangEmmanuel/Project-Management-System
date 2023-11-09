@@ -96,7 +96,7 @@ export const loginUser = async (req: Request, res: Response) => {
     const { email, password } = req.body;
     const procedureName = "getUserByEmail";
 
-    // console.log(email);
+    console.log(req.body);
     
 
     const { error } = validateLoginUser.validate(req.body);

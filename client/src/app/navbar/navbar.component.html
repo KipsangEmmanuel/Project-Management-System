@@ -9,10 +9,12 @@
       </label>
       <ul class="links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li>
+        <a href="#">Sign Up</a>
+      </li>
       </ul>
       <div class="buttons">
-        <li *ngIf="!loggedIn">
+        <li *ngIf="loggedIn">
             <a href="#" class="signup"><a routerLink="/register">Sign Up</a></a>
         </li>
         <!-- <li *ngIf="!loggedIn">

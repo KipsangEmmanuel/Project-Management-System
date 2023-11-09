@@ -16,6 +16,6 @@ SELECT * FROM users;
 
 -- select * from users where isAdmin = 1
 
--- update users set isAdmin = 1 where email = ''
+update users set isAdmin = 1 where email = 'sam@gmail.com'
 
 -- create database PMS

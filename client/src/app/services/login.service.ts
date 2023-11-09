@@ -15,7 +15,7 @@ export class LoginService {
       method: "POST",
       body: JSON.stringify(userLogins)
     })
-// console.log(response);
+// console.log(userLogins);
 
     const data = await response.json()
     console.log(data);
