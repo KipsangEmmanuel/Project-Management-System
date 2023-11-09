@@ -1,1 +1,53 @@
-<p>admin works!</p>
+<app-navbar></app-navbar>
+
+
+<header>
+    <h1>Admin Panel</h1>
+    <button (click)="openCreateProjectModal()">Create Project</button>
+  </header>
+  
+  <div id="projectListContainer">
+    <h2>All Projects</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>Description</th>
+          <th>Due Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="projectList">
+        <tr *ngFor="let project of projects">
+          <td>{{ project.project_name }}</td>
+          <td>{{ project.project_description }}</td>
+          <td>{{ project.dueDate }}</td>
+          <td>
+            <button (click)="openAssignModal(project)">Assign</button>
+            <button (click)="editProject(project)">Edit</button>
+            <button (click)="deleteProject(project)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="createProjectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeCreateProjectModal()">&times;</span>
+      <h2>Create Project</h2>
+      <form id="createProjectForm">
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="project_name" [(ngModel)]="projectName" name="projectName" required>
+  
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="description" name="description" rows="4"></textarea>
+  
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" [(ngModel)]="dueDate" name="dueDate" required>
+  
+        <button type="button" (click)="createProject()">Create Project</button>
+      </form>
+    </div>
+  </div>
+  
