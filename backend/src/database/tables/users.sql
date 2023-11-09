@@ -11,7 +11,7 @@ CREATE  TABLE users (
 
 SELECT * FROM users;
 
-DROP TABLE users
+-- DROP TABLE users
 
 
 -- select * from users where isAdmin = 1

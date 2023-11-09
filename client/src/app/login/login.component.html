@@ -4,15 +4,14 @@
             <div class="circle circle-one"></div>
             <div class="form-container">
                 <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
-                <h1 class="opacity">REGISTER</h1>
-                <form [formGroup]="registerUser" (ngSubmit)="createUser()">
-                    <input type="text" placeholder="USERNAME" formControlName="username" />
-                    <input type="email" placeholder="EMAIL" formControlName="email" />
-                    <input type="password" placeholder="PASSWORD" formControlName="password" />
-                    <button class="opacity" type="submit" >SUBMIT</button>
+                <h1 class="opacity">LOGIN</h1>
+                <form id="login-form" #loginform="ngForm" (ngSubmit)="authenticateUser(loginform.value)" >
+                    <input type="text" placeholder="USERNAME" />
+                    <input type="password" placeholder="PASSWORD" />
+                    <button class="opacity">SUBMIT</button>
                 </form>
                 <div class="register-forget opacity">
-                    <a href="">LOGIN</a>
+                    <a href="">REGISTER</a>
                 </div>
             </div>
             <div class="circle circle-two"></div>

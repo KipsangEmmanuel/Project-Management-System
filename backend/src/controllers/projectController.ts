@@ -39,6 +39,8 @@ export const createProject = async (req: Request, res: Response) => {
     res.send((error as Error).message);
   }
 };
+
+
 export const updateProject = async (req: Request, res: Response) => {
   try {
     const { project_id, project_name, project_description, dueDate } = req.body;
@@ -68,6 +70,8 @@ export const updateProject = async (req: Request, res: Response) => {
     });
   }
 };
+
+
 export const deleteProject = async (req: Request, res: Response) => {
   try {
     const project_id = req.params.project_id;
@@ -92,6 +96,8 @@ export const deleteProject = async (req: Request, res: Response) => {
     });
   }
 };
+
+
 export const completeProject = async (req: Request, res: Response) => {
   try {
     const project_id = req.params.project_id;
@@ -111,6 +117,8 @@ export const completeProject = async (req: Request, res: Response) => {
     });
   }
 };
+
+
 export const inProgressProject = async (req: Request, res: Response) => {
   try {
     const project_id = req.params.project_id;
@@ -130,6 +138,8 @@ export const inProgressProject = async (req: Request, res: Response) => {
     });
   }
 };
+
+
 export const getProject = async (req: Request, res: Response) => {
   try {
     const project_id = req.params.project_id;
@@ -152,6 +162,8 @@ export const getProject = async (req: Request, res: Response) => {
     res.status(404).send({ message: "internal server error" });
   }
 };
+
+
 export const getProjects = async (req: Request, res: Response) => {
   try {
     const procedureName = "getProjects";
@@ -164,6 +176,8 @@ export const getProjects = async (req: Request, res: Response) => {
     res.status(404).send({ message: "internal server error" });
   }
 };
+
+
 export const getAssignedProjects = async (req: Request, res: Response) => {
   try {
     const procedureName3 = "getAssignedProjects";
@@ -176,6 +190,8 @@ export const getAssignedProjects = async (req: Request, res: Response) => {
     res.status(404).send({ message: "internal server error" });
   }
 };
+
+
 export const assignProject = async (req: Request, res: Response) => {
   try {
     const project_id = req.body.project_id;
@@ -207,6 +223,8 @@ export const assignProject = async (req: Request, res: Response) => {
     res.status(404).send({ message: "internal server error" });
   }
 };
+
+
 export const unassignProject = async (req: Request, res: Response) => {
   try {
     const project_id = req.body.project_id;
@@ -238,6 +256,7 @@ export const unassignProject = async (req: Request, res: Response) => {
     res.status(404).send({ message: "internal server error" });
   }
 };
+
 
 export const getUserAssignedProject = async (req: Request, res: Response) => {
   try {

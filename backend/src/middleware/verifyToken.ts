@@ -24,7 +24,7 @@ export const verifyToken = (
     }
     const decoded = jwt.verify(
       token,
-      process.env.SECRET_KEY as string
+      process.env.SECRET as string
     ) as checkDetailsUser;
     request.info = decoded;
   } catch (error) {

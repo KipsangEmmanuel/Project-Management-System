@@ -9,7 +9,7 @@ CREATE TABLE projects (
 	isCompleted BIT NOT NULL DEFAULT 0,
 )
 
-drop TABLE projects
+-- drop TABLE projects
 
 
 select * from dbo.projects
