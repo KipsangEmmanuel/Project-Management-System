@@ -23,9 +23,9 @@
           <td>{{ project.project_description }}</td>
           <td>{{ project.dueDate }}</td>
           <td>
-            <button (click)="openAssignModal(project)">Assign</button>
-            <button (click)="editProject(project)">Edit</button>
-            <button (click)="deleteProject(project)">Delete</button>
+            <button (click)="openAssignModal()">Assign</button>
+            <button (click)="editProject()">Edit</button>
+            <button (click)="deleteProject()">Delete</button>
           </td>
         </tr>
       </tbody>
@@ -36,17 +36,17 @@
     <div class="modal-content">
       <span class="close" (click)="closeCreateProjectModal()">&times;</span>
       <h2>Create Project</h2>
-      <form id="createProjectForm">
+      <form id="createProjectForm"  [formGroup]="createProjectForm" (ngSubmit)="createProject()" >
         <label for="projectName">Project Name:</label>
-        <input type="text" id="project_name" [(ngModel)]="projectName" name="projectName" required>
+        <input type="text" id="project_name" formControlName="project_name"  name="projectName" required>
   
         <label for="description">Description:</label>
-        <textarea id="description" [(ngModel)]="description" name="description" rows="4"></textarea>
+        <textarea id="description"  name="description" formControlName="project_description" rows="4"></textarea>
   
         <label for="dueDate">Due Date:</label>
-        <input type="date" id="dueDate" [(ngModel)]="dueDate" name="dueDate" required>
+        <input type="date" id="dueDate"  formControlName="dueDate" name="dueDate" required>
   
-        <button type="button" (click)="createProject()">Create Project</button>
+        <button type="submit" >Create Project</button>
       </form>
     </div>
   </div>

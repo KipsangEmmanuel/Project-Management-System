@@ -24,5 +24,8 @@ export class UserService {
     // console.log(role);
     return role
   }
+  getUsers(){
+    
+  }
 }
 
